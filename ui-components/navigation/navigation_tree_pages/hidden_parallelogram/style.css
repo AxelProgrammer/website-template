@@ -1,0 +1,94 @@
+:root {
+    --primary-background: #ffffff;
+    --li-hover: #CFD8DC;
+    --li-last: #78909C;
+    --li-last-hover: #677e8a;
+}
+body {
+    background-color: #f1f1f1;
+}
+
+
+
+#navigation_drop-down_parallelograms {
+    margin: 30px 25px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#navigation_drop-down_parallelograms ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+    transition: all 0.5s ease;
+}
+
+#navigation_drop-down_parallelograms:hover ul>li {
+    transition-delay: 0.1s;
+    margin-left: 0;
+    max-width: 100%;
+    min-width: 20px;
+}
+
+
+#navigation_drop-down_parallelograms ul li {
+    transform: skewX(-15deg);
+    background-color: var(--primary-background);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    max-width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: -2%;
+    transition: all 0.5s;
+    transition-delay: 0.1s;
+}
+
+#navigation_drop-down_parallelograms ul li:hover {
+    transition-delay: 0.1s;
+    background-color: var(--li-hover);
+}
+
+#navigation_drop-down_parallelograms ul li:first-child {
+    margin-left: 0px;
+}
+
+#navigation_drop-down_parallelograms ul li a {
+    display: block;
+    padding: 7px;
+    transform: skewX(15deg);
+    text-decoration: none;
+    color: #444;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+}
+
+#navigation_drop-down_parallelograms ul li:last-child {
+    background-color: var(--li-last);
+    max-width: 20%;
+    color: var(--primary-background);
+}
+
+#navigation_drop-down_parallelograms ul li:last-child:hover {
+    background-color: var(--li-last-hover);
+}
+
+#navigation_drop-down_parallelograms ul li:last-child a {
+    color: var(--primary-background);
+}
+
+@media (max-width: 968px) {
+    #navigation_drop-down_parallelograms ul li {
+        transition-delay: 0.1s;
+        margin-left: 0;
+        max-width: 100%;
+    }
+    #navigation_drop-down_parallelograms {
+        margin: 10px 5px;
+    }
+}
