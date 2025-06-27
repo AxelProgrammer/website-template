@@ -1,0 +1,119 @@
+:root {
+  /* Основные цвета */
+  --bg: #dddbd9;
+  --list-bg: #ffffff;
+  --text-color: #497081;
+  --border-color: #eee;
+  --checked-color: #ccc;
+  
+  --checkbox-border: #497081;
+  --checkbox-size: 13px;
+  --checkbox-checked-size: 17px;
+  
+  --list-shadow: 2px 2px 14px rgba(0,0,0,0.15);
+  
+  --list-width: 240px;
+  --font-size: 0.82rem;
+  --checkmark-size: 22px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+#todo-list_checkmark_disappears {
+  list-style: none;
+  padding: 10px 30px;
+  background: var(--list-bg);
+  color: var(--text-color);
+  border-radius: 5px;
+  box-shadow: var(--list-shadow);
+  width: var(--list-width);
+}
+
+#todo-list_checkmark_disappears li {
+  padding: 10px 0 15px;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#todo-list_checkmark_disappears li:last-child {
+  border-bottom: none;
+}
+
+#todo-list_checkmark_disappears label {
+  cursor: pointer;
+  font-size: var(--font-size);
+  width: 100%;
+  display: block;
+}
+
+#todo-list_checkmark_disappears input[type="checkbox"] {
+  float: right;
+  opacity: 0;
+  position: absolute;
+}
+
+#todo-list_checkmark_disappears span {
+  position: relative;
+  display: block;
+  transition: all 550ms ease-in-out;
+}
+
+#todo-list_checkmark_disappears input[type="checkbox"] + span::after {
+  content: "";
+  display: block;
+  border: 1px solid var(--checkbox-border);
+  border-radius: 50%;
+  height: var(--checkbox-size);
+  width: var(--checkbox-size);
+  position: absolute;
+  right: 0;
+  top: 1px;
+  z-index: 10;
+  transition: all 550ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+#todo-list_checkmark_disappears input[type="checkbox"] + span::before {
+  content: "✔";
+  display: block;
+  font-size: var(--checkmark-size);
+  height: var(--checkbox-size);
+  width: var(--checkbox-size);
+  position: absolute;
+  right: -2px;
+  top: -8px;
+  z-index: 10;
+  opacity: 0;
+}
+
+#todo-list_checkmark_disappears input[type="checkbox"]:checked + span {
+  color: var(--checked-color);
+  text-decoration: line-through;
+  transition: all 550ms ease-in-out;
+}
+
+#todo-list_checkmark_disappears input[type="checkbox"]:checked + span::after {
+  opacity: 0;
+  height: var(--checkbox-checked-size);
+  width: var(--checkbox-checked-size);
+  top: -2px;
+  right: -2px;
+}
+
+#todo-list_checkmark_disappears input[type="checkbox"]:checked + span::before {
+  opacity: 1;
+  transition: all 550ms ease-in-out;
+}
