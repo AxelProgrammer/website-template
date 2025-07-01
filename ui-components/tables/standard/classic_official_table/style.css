@@ -1,0 +1,176 @@
+body {
+    padding: 25px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.admission-stats-table {
+    border-collapse: collapse !important;
+    border: 1px solid #ddd !important;
+}
+
+.admission-stats-table th,
+.admission-stats-table td {
+    border: 1px solid #ddd !important;
+    padding: 5px !important;
+}
+
+.admission-stats-table thead th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dataTables_wrapper {
+    overflow-x: auto;
+}
+
+.container-main .content {
+    max-width: 1440px !important;
+}
+
+table {
+    margin-right: 20px !important;
+    font-size: 12px;
+}
+
+thead {
+    text-align: center;
+}
+
+.tableHead th {
+    position: sticky !important;
+    top: 0 !important;
+    background: white;
+}
+
+select,
+td {
+    width: auto;
+    max-width: 150px;
+    text-align: center;
+}
+
+.dataTables_info,
+.dataTables_paginate {
+    position: sticky;
+    bottom: 0;
+    background: white;
+}
+
+.min-width_1 { min-width: 40px; }
+
+.min-width_2 { min-width: 60px; }
+
+.min-width_3 { min-width: 80px; }
+
+.min-width_4 { min-width: 100px; }
+
+.min-width_5 { min-width: 120px; }
+
+.min-width_6 { min-width: 140px; }
+
+.min-width_7 { min-width: 150px; }
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; 
+  border: 1px solid #ddd;
+}
+
+.admission-stats-table {
+  width: max-content; 
+  min-width: 100%;  
+  border-collapse: collapse;
+}
+
+.admission-stats-table tbody.table-body {
+  display: block;
+  max-height: 500px; 
+  overflow-y: scroll; 
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #f1f1f1; 
+}
+
+.admission-stats-table thead {
+  display: table;    
+  max-width: 95.5%;
+  table-layout: fixed; 
+  margin-right: 8px;
+}
+
+.admission-stats-table th,
+.admission-stats-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+/* Базовые стили навигации */
+.table-navigation {
+    background: #f7f7f7;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.nav-item {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: calc(25% - 10px);
+}
+
+.nav-link {
+    display: flex;
+    padding: 5px 10px;
+    background: #ffffff;
+    color: #333;
+    justify-content: center;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #333;
+    background: #ececec;
+}
+
+.nav-link:hover {
+    color: #333;
+    background: #ececec;
+    text-decoration: none;
+}
+
+.nav-item a.active {
+    color: #333;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .nav-item {
+        width: 48%;
+        min-width: auto;
+    }
+}
+
